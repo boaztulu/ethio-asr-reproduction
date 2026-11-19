@@ -1,0 +1,511 @@
+{
+ "pattern": "\\[(?:amharic|tigrinya|oromo|wolaytta|sidaama|amh|tir|orm|wal|sid)\\]\\|?",
+ "models": {
+  "ours_afrihubert": {
+   "overall": {
+    "n": 18810,
+    "leading": 18809,
+    "repeated": 64,
+    "at_end": 62,
+    "glued": 64
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 24,
+     "at_end": 24,
+     "glued": 24
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3780,
+     "repeated": 16,
+     "at_end": 15,
+     "glued": 16
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 1,
+     "at_end": 1,
+     "glued": 1
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 5,
+     "at_end": 5,
+     "glued": 5
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 18,
+     "at_end": 17,
+     "glued": 18
+    }
+   }
+  },
+  "ours_mms1b": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 2689,
+    "at_end": 2689,
+    "glued": 2095
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 232,
+     "at_end": 232,
+     "glued": 162
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 496,
+     "at_end": 496,
+     "glued": 299
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 779,
+     "at_end": 779,
+     "glued": 570
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 933,
+     "at_end": 933,
+     "glued": 841
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 249,
+     "at_end": 249,
+     "glued": 223
+    }
+   }
+  },
+  "ours_mms300m": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 899,
+    "at_end": 892,
+    "glued": 719
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 28,
+     "at_end": 27,
+     "glued": 25
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 113,
+     "at_end": 113,
+     "glued": 107
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 130,
+     "at_end": 130,
+     "glued": 119
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 488,
+     "at_end": 482,
+     "glued": 350
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 140,
+     "at_end": 140,
+     "glued": 118
+    }
+   }
+  },
+  "ours_w2vbert_43k": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 0,
+    "at_end": 0,
+    "glued": 0
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    }
+   }
+  },
+  "ours_w2vbert": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 0,
+    "at_end": 0,
+    "glued": 0
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    }
+   }
+  },
+  "ours_xlsr_adapter": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 2934,
+    "at_end": 2457,
+    "glued": 935
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 52,
+     "at_end": 48,
+     "glued": 24
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 270,
+     "at_end": 218,
+     "glued": 107
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 1506,
+     "at_end": 1400,
+     "glued": 156
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 6,
+     "at_end": 3,
+     "glued": 6
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 1100,
+     "at_end": 788,
+     "glued": 642
+    }
+   }
+  },
+  "ours_xlsr_noadapter": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 15702,
+    "at_end": 15702,
+    "glued": 15702
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 2823,
+     "at_end": 2823,
+     "glued": 2823
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 3149,
+     "at_end": 3149,
+     "glued": 3149
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 2990,
+     "at_end": 2990,
+     "glued": 2990
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 4217,
+     "at_end": 4217,
+     "glued": 4217
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 2523,
+     "at_end": 2523,
+     "glued": 2523
+    }
+   }
+  },
+  "released_1B": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 2474,
+    "at_end": 2473,
+    "glued": 2406
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 201,
+     "at_end": 201,
+     "glued": 188
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 395,
+     "at_end": 395,
+     "glued": 387
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 591,
+     "at_end": 591,
+     "glued": 553
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 1014,
+     "at_end": 1013,
+     "glued": 1012
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 273,
+     "at_end": 273,
+     "glued": 266
+    }
+   }
+  },
+  "released_300M": {
+   "overall": {
+    "n": 18810,
+    "leading": 18810,
+    "repeated": 721,
+    "at_end": 699,
+    "glued": 680
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 58,
+     "at_end": 54,
+     "glued": 55
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 121,
+     "at_end": 115,
+     "glued": 119
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 40,
+     "at_end": 39,
+     "glued": 37
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 421,
+     "at_end": 411,
+     "glued": 389
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 81,
+     "at_end": 80,
+     "glued": 80
+    }
+   }
+  },
+  "released_600M": {
+   "overall": {
+    "n": 18810,
+    "leading": 18794,
+    "repeated": 0,
+    "at_end": 0,
+    "glued": 0
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3781,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 2998,
+     "repeated": 0,
+     "at_end": 0,
+     "glued": 0
+    }
+   }
+  },
+  "released_94M": {
+   "overall": {
+    "n": 18810,
+    "leading": 18809,
+    "repeated": 526,
+    "at_end": 492,
+    "glued": 525
+   },
+   "per_language": {
+    "amh": {
+     "n": 3420,
+     "leading": 3420,
+     "repeated": 142,
+     "at_end": 140,
+     "glued": 142
+    },
+    "orm": {
+     "n": 3781,
+     "leading": 3780,
+     "repeated": 128,
+     "at_end": 115,
+     "glued": 128
+    },
+    "sid": {
+     "n": 3561,
+     "leading": 3561,
+     "repeated": 130,
+     "at_end": 122,
+     "glued": 130
+    },
+    "tir": {
+     "n": 5034,
+     "leading": 5034,
+     "repeated": 106,
+     "at_end": 95,
+     "glued": 105
+    },
+    "wal": {
+     "n": 3014,
+     "leading": 3014,
+     "repeated": 20,
+     "at_end": 20,
+     "glued": 20
+    }
+   }
+  }
+ }
+}

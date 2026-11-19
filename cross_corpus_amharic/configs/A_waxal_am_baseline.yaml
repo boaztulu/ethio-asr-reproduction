@@ -1,0 +1,55 @@
+# Base template for combined-dataset Amharic ASR experiments.
+# Copy this and set: project, output_dir suffix, dataset_path, max_steps.
+#
+# Architecture / training hyperparameters mirror
+# reproduction_uf/configs/04_paper_w2v-bert-2.0.yaml (best-performing model)
+# but with language filtered to amharic-only and multi-GPU-aware batching.
+
+project: Ethio-ASR-combined-A-waxal-am-baseline
+output_dir: /path/to/Ethio-ASR/combined_dataset_experiment/models
+
+seed: 42
+pretrained_model: facebook/w2v-bert-2.0
+
+# w2v-BERT specifics
+freeze_feature_encoder: true
+add_final_layer_adapter: true
+
+# Batch / precision.  Assumes 4 GPUs via torchrun.  effective_batch = per_device * grad_accum * NGPUS
+# = 8 * 1 * 4 = 32, matching the paper's 8 * 4 * 1 = 32.  If you change --gpus-per-node, adjust
+# gradient_accumulation_steps to keep effective_batch = 32.
+batch_size: 8
+gradient_accumulation_steps: 1
+
+fp16: false
+bf16: true
+gradient_checkpointing: true
+
+# Steps — set per-run based on dataset hours (scale-by-size)
+max_steps: 7129
+num_epochs: 9999          # ignored when max_steps > 0
+learning_rate: 3.0e-05
+warmup_ratio: 0.1
+
+# Checkpoint / eval cadence
+save_steps: 700
+eval_steps: 700
+logging_steps: 25
+save_total_limit: 2
+
+# Dataset (local pre-built bundle)
+use_custom_dataset: true
+dataset_path: /path/to/Ethio-ASR/combined_dataset_experiment/data/waxal_am
+train_split: train
+eval_split: validation
+language: amharic          # single-language, no LID tokens added
+
+sample: false
+sample_size: 0
+
+# Language tokens (only add when language == 'all')
+add_language_tokens: false
+apply_accent_replacements: true
+
+# Same character set as paper's 04_paper_w2v-bert-2.0.yaml (Ge'ez + Latin + digits)
+character_set: ' !#$%&''*+,-.0123456789=?@abcdefghijklmnopqrstuvwxyzሀሁሂሃሄህሆሇለሉሊላሌልሎሏሐሑሒሓሔሕሖሗመሙሚማሜምሞሟሠሡሢሣሤሥሦሧረሩሪራሬርሮሯሰሱሲሳሴስሶሷሸሹሺሻሼሽሾሿቀቁቂቃቄቅቆቇቈቊቋቌቍቐቑቒቓቔቕቖቘቚቛቜቝበቡቢባቤብቦቧቨቩቪቫቬቭቮቯተቱቲታቴትቶቷቸቹቺቻቼችቾቿኀኁኂኃኄኅኆኇኈኊኋኌኍነኑኒናኔንኖኗኘኙኚኛኜኝኞኟአኡኢኣኤእኦኧከኩኪካኬክኮኯኰኲኳኴኵኸኹኺኻኼኽኾዀዂዃዄዅወዉዊዋዌውዎዏዐዑዒዓዔዕዖዘዙዚዛዜዝዞዟዠዡዢዣዤዥዦዧየዩዪያዬይዮዯደዱዲዳዴድዶዷዸዹዺዻዼዽዾዿጀጁጂጃጄጅጆጇገጉጊጋጌግጎጏጐጒጓጔጕጘጙጚጛጜጝጞጟጠጡጢጣጤጥጦጧጨጩጪጫጬጭጮጯጰጱጲጳጴጵጶጷጸጹጺጻጼጽጾጿፀፁፂፃፄፅፆፇፈፉፊፋፌፍፎፏፐፑፒፓፔፕፖፗፘፙፚ፠፡።፣፤፥፦፧፨፩፪፫፬፭፮፯፰፱፲፳፴፵፶፷፸፹፺፻፼€'

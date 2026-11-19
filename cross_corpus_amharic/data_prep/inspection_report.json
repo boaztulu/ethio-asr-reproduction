@@ -1,0 +1,219 @@
+{
+  "snapwre": {
+    "name": "snapwre/amharic-speech",
+    "splits": {
+      "train": {
+        "rows": 5980,
+        "hours": 18.326,
+        "avg_duration_s": 11.03,
+        "unique_speakers": 258,
+        "unique_chars_in_sample": 299,
+        "top_chars_sample": [
+          {
+            "char": " ",
+            "count": 35782
+          },
+          {
+            "char": "ን",
+            "count": 7204
+          },
+          {
+            "char": "ት",
+            "count": 7062
+          },
+          {
+            "char": "በ",
+            "count": 5859
+          },
+          {
+            "char": "የ",
+            "count": 5752
+          },
+          {
+            "char": "ል",
+            "count": 5204
+          },
+          {
+            "char": "መ",
+            "count": 4836
+          },
+          {
+            "char": "ተ",
+            "count": 4612
+          },
+          {
+            "char": "ር",
+            "count": 4283
+          },
+          {
+            "char": "አ",
+            "count": 3956
+          },
+          {
+            "char": "ስ",
+            "count": 3794
+          },
+          {
+            "char": "ው",
+            "count": 3758
+          },
+          {
+            "char": "ና",
+            "count": 3744
+          },
+          {
+            "char": "ም",
+            "count": 3588
+          },
+          {
+            "char": "ለ",
+            "count": 3430
+          },
+          {
+            "char": "ማ",
+            "count": 2991
+          },
+          {
+            "char": "ገ",
+            "count": 2695
+          },
+          {
+            "char": "ች",
+            "count": 2661
+          },
+          {
+            "char": "እ",
+            "count": 2587
+          },
+          {
+            "char": "ረ",
+            "count": 2475
+          },
+          {
+            "char": "ግ",
+            "count": 2425
+          },
+          {
+            "char": "ያ",
+            "count": 2402
+          },
+          {
+            "char": "ደ",
+            "count": 2285
+          },
+          {
+            "char": "ራ",
+            "count": 2204
+          },
+          {
+            "char": "ከ",
+            "count": 2181
+          },
+          {
+            "char": "ብ",
+            "count": 2157
+          },
+          {
+            "char": "ላ",
+            "count": 2026
+          },
+          {
+            "char": "ድ",
+            "count": 1945
+          },
+          {
+            "char": "ይ",
+            "count": 1911
+          },
+          {
+            "char": "ባ",
+            "count": 1877
+          }
+        ]
+      },
+      "validation": {
+        "rows": 707,
+        "hours": 2.157,
+        "avg_duration_s": 10.98,
+        "unique_speakers": 28,
+        "unique_chars_in_sample": 259
+      },
+      "test": {
+        "rows": 718,
+        "hours": 2.222,
+        "avg_duration_s": 11.14,
+        "unique_speakers": 34,
+        "unique_chars_in_sample": 269
+      }
+    },
+    "columns": [
+      "audio",
+      "clip_id",
+      "sentence",
+      "speaker_id",
+      "language",
+      "duration_s",
+      "speech_s",
+      "speech_start_s",
+      "speech_end_s",
+      "lufs",
+      "gender",
+      "age_band",
+      "region",
+      "sample_rate",
+      "up_votes",
+      "down_votes"
+    ]
+  },
+  "waxal_amharic": {
+    "name": "badrex/waxalNLP-ethiopic-final (amharic filter)",
+    "splits": {
+      "train": {
+        "rows": 38022,
+        "hours": 189.708,
+        "avg_duration_s": 17.96,
+        "unique_chars_in_sample": 333
+      },
+      "validation": {
+        "rows": 2912,
+        "hours": 13.966,
+        "avg_duration_s": 17.27,
+        "unique_chars_in_sample": 319
+      },
+      "test": {
+        "rows": 3420,
+        "hours": 16.241,
+        "avg_duration_s": 17.1,
+        "unique_chars_in_sample": 313
+      }
+    },
+    "columns": [
+      "id",
+      "speaker_id",
+      "audio",
+      "transcription",
+      "language",
+      "gender",
+      "audio_duration"
+    ]
+  },
+  "training_step_projection": {
+    "baseline_paper_steps": 36800,
+    "baseline_paper_hours": 196.0,
+    "steps_per_hour": 187.76,
+    "per_run": {
+      "A_waxal_am_only": {
+        "train_hours": 189.708,
+        "scaled_steps": 35619
+      },
+      "B_snapwre_only": {
+        "train_hours": 18.326,
+        "scaled_steps": 3441
+      },
+      "C_combined": {
+        "train_hours": 208.034,
+        "scaled_steps": 39059
+      }
+    }
+  }
+}
